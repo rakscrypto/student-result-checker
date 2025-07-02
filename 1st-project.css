@@ -1,0 +1,150 @@
+/* ===== Global Reset & Font ===== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Page Background ===== */
+body {
+    background-image: url("images/markus-spiske-hbb6GkG6p9M-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+/* ===== Page Wrapper to Center Container & Footer ===== */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+/* ===== Result Container ===== */
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    background-image: url("images/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg");
+    max-width: 500px;
+    width: 90%;
+    padding: 30px 20px;
+    margin: 60px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Inputs ===== */
+input {
+    padding: 10px;
+    width: 70%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* ===== Table Styling ===== */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* ===== Buttons ===== */
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Button Hover */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Second Button (e.g. Clear) - Red */
+button:nth-of-type(2) {
+    background-color: #f44336;
+}
+
+/* ===== Hidden Class ===== */
+.hidden {
+    display: none;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    color: white;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* ===== Print Only Result Box ===== */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #resultBox, #resultBox * {
+        visibility: visible;
+    }
+
+    #resultBox {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    button {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+}
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.button-group button {
+    padding: 8px 20px;
+    font-size: 14px;
+    min-width: auto;
+    flex: none;
+}
